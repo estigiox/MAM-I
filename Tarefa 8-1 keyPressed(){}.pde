@@ -25,15 +25,11 @@ void draw() {
 
   if (bolaY <= 10 || bolaY >= 590) {
     dY = -dY;
+  } else if (bolaX <= 10 || bolaX >= 590) {
+    dX = -dX;
   }
   
   if ((bolaX >= 560) && (bolaY >= bastaoYD) && (bolaY <= bastaoYD +100)) {
-    dX = -dX;
-  } else if (bolaX >= 610) {
-    textSize(20);
-    text("Jogador 1 venceu", width/2, height/2);
-    noLoop();
-  } else if (bolaX <= 10) {
     dX = -dX;
   }
 }
